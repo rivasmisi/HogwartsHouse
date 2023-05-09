@@ -1,4 +1,4 @@
-GRIFINDOR
+GRYFFINDOR
 Andrea Alfaro de Vides
 Orlando Vides
 Ana Vides
@@ -18,7 +18,6 @@ Axel Iraheta
 Adrian Iraheta
 
 RAVENCLAW
-
 Gracia Maria Marroquin
 Alejandra Chavez
 Carmen Peña
@@ -36,7 +35,7 @@ Roberto Chavez
 Aleida de Chavez
 Marcela Chavez
 
-SLITHERIN
+SLYTHERIN
 Raul Marroquin
 Claudia de Marroquin
 Nelly Jovel
@@ -53,7 +52,7 @@ Marcelo Madriz
 Estela de Madriz
 Raul Marroquin
 
-HUFFLEPUFF
+SLYTHERIN
 Karen Marroquin
 Julio Hercules
 Leonor Melendez

@@ -11,21 +11,21 @@
 </head>
 <body>
 
-    <div class="background-image">
+    <div class="background-image" id="background">
+        <div id="view"></div>
         <div class="container" id="main-container">
             <h1>Tu casa de Hogwarts</h1>
             <br>
+            <h2>Ingresa tu nombre:</h2>
             
-            <div class="name-container">
-                <h2>Ingresa tu nombre...</h2>
-                
-                <div class="input-div">
-                    <input id="input-name" type="text" class="name-field" required autofocus>
-                    <img src="./assets/images/sorting_hat.png" alt="sorting_hat" class="send-btn" id="send">
-                </div>
+            <div class="input-div">
+                <form id="form">
+                    <input type="text" id="input-name" class="name-field">
+                    <input type="image" src="./assets/images/sorting_hat.png" value=" submit" id="send">
+                </form>
+                <!-- <img src="./assets/images/sorting_hat.png" alt="sorting_hat" class="send-btn" id="send"> -->
             </div>
         </div>
-        <!-- <div id="ghost-backdrop"></div> -->
 
         <div id="loading-screen">
             <h1>Perteneces a...</h1>

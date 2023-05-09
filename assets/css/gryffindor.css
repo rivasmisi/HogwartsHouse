@@ -1,0 +1,159 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* Font */
+@import url("https://fonts.cdnfonts.com/css/harry-potter");
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Heebo&family=Montserrat:wght@200;300&family=Roboto:wght@300&family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Zilla+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@700&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    height: 100%;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h1 {
+    font-size: 5.5rem;
+    font-family: 'Harry Potter', sans-serif;
+    color: white;
+}
+
+h2 {
+    font-family: 'Harry Potter', sans-serif;
+    color: white;
+    font-size: 2.5rem;
+}
+
+p {
+    font-family: 'Zilla Slab', serif;
+    line-height: 2.75rem;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.04rem;
+    color: white;
+    font-size: 2rem;
+}
+
+/* 
+* COLORS *
+Red = #B72025
+Yellow = #FCAF16
+White = #F7F7CE 
+*/
+
+/* Style */
+#background {
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    width: 15rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 3.5rem;
+    gap: 5rem;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: normal;
+    align-items: center;
+    gap: 5rem;
+}
+
+.titles {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.titles > h1 {
+    font-size: 4rem;
+    color: #FCAF16;
+}
+
+.titles > h2 {
+    color: #F7F7CE;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.return {
+    text-align: end;
+}
+
+.return > button {
+    font-family: 'Zilla Slab', serif;
+    font-size: 1.5rem;
+    width: 10rem;
+    height: 3.5rem;
+    border-radius: 3rem;
+    border: none;
+    margin-inline-end: 2rem;
+    background-color: #F7F7CE;
+    color: black;
+    font-weight: 700;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.return > button:hover {
+    cursor: pointer;
+    background-color: #d6d6ad;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}

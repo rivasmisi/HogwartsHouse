@@ -11,7 +11,7 @@ TODO: Validate upper-case and pattern (tildes) for input
 */
 
 // Names list
-const names = {
+/* const names = {
     'Andrea Alfaro de Vides': 'gryffindor.html',
     'Orlando Vides': 'gryffindor.html',
     'Ana Vides': 'gryffindor.html',
@@ -72,7 +72,80 @@ const names = {
     'Antonio Funes': 'hufflepuff.html',
     'Eduardo Serafin': 'hufflepuff.html',
     'Valeria Serafin': 'hufflepuff.html',
-};
+}; */
+
+const houses = [
+    {
+        house: 'gryffindor',
+        names: ['andrea alfaro de vides',
+                'orlando vides',
+                'ana vides',
+                'santiago alfaro',
+                'mateo alfaro',
+                'mateo alfaro',
+                'julia de alfaro',
+                'roberto alfaro',
+                'paola marroquin',
+                'gabriela marroquin',
+                'maria fernanda jovel',
+                'maria renee jovel',
+                'juan carlos garcia',
+                'ulises iraheta',
+                'roxana',
+                'axel iraheta',
+                'adrian iraheta']
+    },
+    {
+        house: 'ravenclaw',
+        names: ['gracia maria marroquin',
+                'alejandra chavez',
+                'carmen peña',
+                'pamela rivas',
+                'scarleth alvarado',
+                'hatzel lopez',
+                'dariana gonzalez',
+                'angela ayala',
+                'paola ayala',
+                'karina mejia',
+                'karen alas de abrego',
+                'jehovani miguel',
+                'aldo carpio',
+                'roberto chavez',
+                'aleida de chavez',
+                'marcela chavez']
+    },
+    {
+        house: 'slytherin',
+        names: ['raul marroquin',
+                'claudia de marroquin',
+                'nelly jovel',
+                'antonio garcia',
+                'dinorah de garcia',
+                'oscar suria',
+                'graciela gavidia',
+                'gladys melara',
+                'carlos santos',
+                'stephani',
+                'christian trabanino',
+                'raquel de trabanino',
+                'marcelo madriz',
+                'estela de madriz']
+    },
+    {
+        house: 'hufflepuff',
+        names: ['karen marroquin',
+                'julio hercules',
+                'leonor melendez',
+                'leonor mancia',
+                'angela mancia',
+                'leticia de funes',
+                'concepción de quintanilla',
+                'wendy funes',
+                'antonio funes',
+                'eduardo serafin',
+                'valeria serafin']
+    }
+]
 
 const bind = () => {
     button = document.querySelector("#send");

@@ -69,11 +69,11 @@ h2 {
 
 p {
     font-family: 'Zilla Slab', serif;
-    line-height: 2.75rem;
-    word-spacing: 0.2rem;
+    line-height: 2.5rem;
+    word-spacing: 0.1rem;
     letter-spacing: 0.04rem;
     color: white;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 /* 
@@ -95,14 +95,14 @@ White = #F7F7CE
 }
 
 .logo {
-    width: 15rem;
+    width: 10rem;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    padding: 3.5rem;
-    gap: 5rem;
+    padding: 2rem;
+    gap: 3rem;
 }
 
 .header {
@@ -131,8 +131,9 @@ White = #F7F7CE
 .description {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
 }
+
 
 .return {
     text-align: end;

@@ -1,3 +1,9 @@
+// Audio Files
+const gryffindor = new Audio('./../assets/audio/gryffindor.mp3');
+const hufflepuff = new Audio('./../assets/audio/hufflepuff.mp3');
+const ravenclaw = new Audio('./../assets/audio/ravenclaw.mp3');
+const slytherin = new Audio('./../assets/audio/slytherin.mp3');
+
 // Elements
 let button = null;
 let mainContainer = null;
@@ -11,7 +17,7 @@ TODO: Validate upper-case and pattern (tildes) for input
 */
 
 // Names list
-/* const names = {
+/*const names = {
     'Andrea Alfaro de Vides': 'gryffindor.html',
     'Orlando Vides': 'gryffindor.html',
     'Ana Vides': 'gryffindor.html',
@@ -72,7 +78,7 @@ TODO: Validate upper-case and pattern (tildes) for input
     'Antonio Funes': 'hufflepuff.html',
     'Eduardo Serafin': 'hufflepuff.html',
     'Valeria Serafin': 'hufflepuff.html',
-}; */
+};*/
 
 const houses = [
     {
@@ -160,31 +166,58 @@ const clickListeners = () => {
     form.addEventListener('submit', e => {
         e.preventDefault(); // Prevent normal submitting
 
-        // Loading screen is shown
-        mainContainer.classList.add("blurred");
-        loadingScreen.style.visibility = 'visible';
+        // Loading screen is shown            
+          
+        // Validating names with house
+        let name = document.querySelector('#input-name').value.toLowerCase();
 
-        setTimeout(() => {
-            // Loading screen off
-            loadingScreen.style.visibility = "hidden"
-            mainContainer.classList.remove("blurred");
+        let verifyName = false;
+        houses.forEach(house => {
+            if(house.names.find(x => x == name)){
+                switch (house.house) {
+                    case "gryffindor":
+                        gryffindor.play();                 
+                        break;
+                    case "ravenclaw":
+                        ravenclaw.play();
+                        break;
+                    case "hufflepuff":
+                        hufflepuff.play();
+                        break;
+                    case "slytherin":
+                        slytherin.play();
+                        break;
+                }
+                setTimeout(() => {
+                    loadingScreen.style.visibility = "hidden"
+                    mainContainer.classList.remove("blurred");
+                }, 2500);
+                verifyName = true;
+                return;
+            } return;
+        });
 
+        console.log(verifyName);
 
-            // Validating names with house
-            let name = document.querySelector('#input-name').value;
-
-            if(names[name]) {
+        if (!verifyName) {
+            alert("Papu no, te equivocaste de barrio la 18 no te lo perdonara")
+        } else {
+            mainContainer.classList.add("blurred");
+            loadingScreen.style.visibility = 'visible';
+        }
+        
+            /* if(names[name]) {
                 const page = names[name];
+                
                 //background.innerHTML = `<div class="background-gryffindor" id="background">`
                 mainContainer.innerHTML = 
                 `<iframe src="${page}" style="height:100vh;width:100%"></iframe>`
             } else {
-                /*
-                TODO: Show the error in input 
-                 */
+                
+                //TODO: Show the error in input 
+                
                 mainContainer.innerHTML = 'Invalid name.';
-            }
-        }, 2000);
+            } */  
     });
 }
 

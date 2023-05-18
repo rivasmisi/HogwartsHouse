@@ -178,7 +178,7 @@ hr {
     font-size: 4rem;
 }
 
-.loader {
+/* .loader {
     position: relative;
     display: flex;
     align-items: center;
@@ -187,9 +187,9 @@ hr {
     max-width: 13rem;
     margin-top: 14.6rem/2;
     margin-bottom: 14.6rem/2;
-}
+} */
 
-.loader:before {
+/* .loader:before {
     width: 100%;
     padding-bottom: 100%;
     box-shadow: inset 0 0 0 1.7rem #fff;
@@ -221,7 +221,7 @@ hr {
 @keyframes pulsB {
     0%, 50% { box-shadow: 0 0 0 0 #fff; opacity: 0; }
     100% { box-shadow: 0 0 0 1.7rem #fff; opacity: 1; }
-}
+} */
 
 
 /* MEDIA QUERY */

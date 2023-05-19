@@ -11,6 +11,7 @@ let loadingScreen = null;
 let form = null;
 let content = null;
 let background = null;
+let loader = null;
 
 const houses = [
     {
@@ -36,7 +37,7 @@ const houses = [
         house: 'ravenclaw',
         names: ['gracia maria marroquin',
             'elba alejandra chavez',
-            'carmen elena peña',
+            'carmen elena pena',
             'allison scarleth alvarado',
             'pamela sofia rivas',
             'andrea dariana gonzalez',
@@ -48,12 +49,12 @@ const houses = [
             'aren alas',
             'aldo carpio',
             'jehovani miguel',
-            'hatzel abraham lopez',
-            ]
+            'hatzel abraham lopez',]
     },
     {
         house: 'slytherin',
         names: ['raul antonio marroquin',
+            'raul marroquin',
             'claudia de marroquin',
             'paola maria marroquin',
             'elsy gomez',
@@ -94,6 +95,7 @@ const bind = () => {
     form = document.querySelector('#form');
     view = document.querySelector('#view');
     background = document.querySelector('#background');
+    loader = document.getElementById('#loader-img');
 }
 
 const clickListeners = () => {
@@ -103,39 +105,47 @@ const clickListeners = () => {
         // Validating names with house
         let name = document.querySelector('#input-name').value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         
-        // Removing accents
-
+        let _house = "";
         let verifyName = false;
         houses.forEach(house => {
             if(house.names.find(x => x == name)){
                 switch (house.house) {
                     case "gryffindor":
-                        gryffindor.play();                 
+                        gryffindor.play();    
+                        _house = house.house;            
                         break;
                     case "ravenclaw":
                         ravenclaw.play();
+                        _house = house.house;
                         break;
                     case "hufflepuff":
                         hufflepuff.play();
+                        _house = house.house;
                         break;
                     case "slytherin":
                         slytherin.play();
+                        _house = house.house
                         break;
                 }
                 setTimeout(() => {
-                    loadingScreen.style.visibility = "hidden"
+                    loadingScreen.style.visibility = "hidden";
                     mainContainer.classList.remove("blurred");
-                }, 2500);
+                    document.getElementById("loader-img").src="";
+                    document.getElementById('loader-img').style = "";
+                }, 3000);
                 verifyName = true;
                 return;
             } return;
         });
 
-        //console.log(verifyName);
-
         if (!verifyName) {
             alert("Ingrese un nombre válido!")
         } else {
+            let image = document.getElementById('loader-img')
+            image.src=`./../assets/images/${_house}.png`;
+            image.style.transform = "scale(2)";
+            image.style.transition = "transform 1.5s ease";
+
             mainContainer.classList.add("blurred");
             loadingScreen.style.visibility = 'visible';
         }

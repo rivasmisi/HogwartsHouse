@@ -54,7 +54,7 @@ table {
 h1 {
     padding-bottom: 2rem;
     font-size: 4rem;
-    line-height: 4.5rem;
+    line-height: 4.75rem;
     font-family: 'Harry Potter', sans-serif;
     color: white;
     /* text-shadow: #5e5e5e 1px 0 10px; */
@@ -63,7 +63,7 @@ h1 {
 h2 {
     font-family: 'Harry Potter', sans-serif;
     color: white;
-    font-size: 3rem;
+    font-size: 2.75rem;
     text-shadow: 3px 3px 3px black;
 }
 h3 {
@@ -71,7 +71,8 @@ h3 {
     color: white;
     font-size: 1.5rem;
     text-align: left;
-    padding-inline-start: 1rem;
+    padding-inline-start: 0.5rem;
+    filter: drop-shadow(2px 2px 1px black)
 }
 hr {
     width: 50%;
@@ -134,6 +135,8 @@ hr {
     height: 3rem;
     border-radius: 3rem;
     padding-inline: 1.5rem;
+    border: 0;
+    box-shadow: 0 0 8px 0px #dcdcdc;
 }
 
 #form {
@@ -167,15 +170,29 @@ hr {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.555);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#loading-screen > h1 {
-    position: relative;
-    top: -4rem;
-    font-size: 4rem;
+#loader-container {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    top: 20%;
+}
+
+#loader-container > h1 {
+    padding-bottom: 0;
+}
+
+
+
+#loader-img {
+    width: 10rem;
+    height: 10rem;
 }
 
 /* .loader {

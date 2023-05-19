@@ -23,6 +23,7 @@ const houses = [
             'steven garcia',
             'gladys melara',
             'alejandra beatriz mulato',
+            'alejandra mulato',
             'leonor melendez',
             'karen marroquin',
             'wendy funes',
@@ -36,20 +37,30 @@ const houses = [
     {
         house: 'ravenclaw',
         names: ['gracia maria marroquin',
+            'gracia marroquin',
             'elba alejandra chavez',
+            'elba chavez',
             'carmen elena pena',
+            'carmen pena',
             'allison scarleth alvarado',
+            'allison alvarado',
             'pamela sofia rivas',
+            'pamela rivas',
             'andrea dariana gonzalez',
+            'andrea gonzalez',
             'paola michelle ayala',
+            'paola ayala',
             'angela melissa ayala',
+            'angela ayala',
             'aleida de chavez',
             'ana marcela chavez',
+            'ana chavez',
             'karina mejia',
             'aren alas',
             'aldo carpio',
             'jehovani miguel',
-            'hatzel abraham lopez',]
+            'hatzel abraham lopez',
+            'hatzel lopez']
     },
     {
         house: 'slytherin',
@@ -57,6 +68,7 @@ const houses = [
             'raul marroquin',
             'claudia de marroquin',
             'paola maria marroquin',
+            'paola marroquin',
             'elsy gomez',
             'michelle rivas',
             'christian trabanino',
@@ -66,15 +78,21 @@ const houses = [
             'carlos santos',
             'stephanie zetino',
             'raul marroquin burgos',
+            'raul burgos',
             'nelly aleida jovel',
+            'nelly jovel',
             'juan carlos garcia',
+            'juan garcia',
             'maria renee garcia',
-            'maria fernanda garcia']
+            'maria fernanda garcia',
+            'maria garcia']
     },
     {
         house: 'hufflepuff',
         names: ['leonor mancia',
             'maria de los angeles mancia',
+            'maria de los angeles',
+            'maria mancia',
             'milagro manzano',
             'ulises iraheta',
             'axel iraheta',
@@ -96,6 +114,7 @@ const bind = () => {
     view = document.querySelector('#view');
     background = document.querySelector('#background');
     loader = document.getElementById('#loader-img');
+    bgMusic = document.getElementById('#bgMusic');
 }
 
 const clickListeners = () => {

@@ -172,6 +172,7 @@ const clickListeners = () => {
 }
 
 let Main = () => {
+    bgMusic.volume = 0.3;
     bind();
     clickListeners();
 }

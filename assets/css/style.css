@@ -71,7 +71,8 @@ h3 {
     font-size: 1.5rem;
     text-align: left;
     padding-inline-start: 0.5rem;
-    filter: drop-shadow(2px 2px 1px black)
+    filter: drop-shadow(2px 2px 1px black);
+    padding-bottom: 1rem;
 }
 hr {
     width: 50%;
@@ -96,6 +97,11 @@ hr {
     filter: blur(8px) brightness(80%);
 }
 
+.input-container {
+    width: 30rem;
+    margin: 0;
+}
+
 .container {
     height: 100vh;
     text-align: center;
@@ -103,7 +109,7 @@ hr {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 
@@ -131,7 +137,7 @@ hr {
 
 #input-name {
     font-family: 'Yusei Magic', sans-serif;
-    flex: 1 0 200px;
+    flex: 1 0 300px;
     font-size: 1.4rem;
     text-align: center;
     width: 100%;
@@ -202,27 +208,46 @@ hr {
 /* MEDIA QUERY */
 @media screen and (max-width: 767px) {
     h1 {
-        padding-bottom: 3rem;
+        padding-bottom: 0;
         font-size: 2.5rem;
         line-height: 4rem;
     }
 
     h2 {
-        padding-bottom: 2.5rem;
+        padding-bottom: 0;
         font-size: 1.5rem;
     }
 
+    h3 {
+        font-size: 1.3rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .container {
+        gap: 0.5rem;
+    }
+
     #form {
-        width: 100%;
+        width: 80%;
+    }
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+        width: 80%;
     }
 
     #input-name {
+        flex: 1 1 15rem;
         font-size: 1rem;
         text-align: center;
-        width: 100%;
+        width: 80%;
         height: 2rem;
         margin-inline: 1rem;
         padding-inline: 1rem;
+        margin: 0;
     }
 
     #send {
@@ -259,23 +284,30 @@ hr {
     }
 
     h2 {
-        padding-bottom: 2.5rem;
         font-size: 2rem;
     }
 
+    h3 {
+        font-size: 1.3rem;
+        padding-bottom: 0;
+    }
+
+    .container {
+        gap: 2rem;
+    }
+
     #input-name {
+        flex: 1 0 16rem;
         font-size: 1rem;
         text-align: center;
         width: 100%;
         height: 2.5rem;
-        margin-inline: 1rem;
         padding-inline: 2rem;
     }
 
     #send {
         width: 6rem;
         height: 6rem;
-        padding-top: 1rem;
     }
 
     /* Loader */

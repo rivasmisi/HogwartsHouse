@@ -278,10 +278,13 @@ hr {
         height: 4rem;
     }
 
-    #loading-screen > h1 {
-        position: relative;
-        top: -4rem;
-        font-size: 2rem;
+    #loader-container > h1 {
+        font-size: 2.5rem;
+    }
+
+    #loader-img {
+        width: 4.5rem;
+        height: 4.5rem;
     }
 }
 

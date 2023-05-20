@@ -7,6 +7,20 @@
 @import url("https://fonts.cdnfonts.com/css/harry-potter");
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Heebo&family=Montserrat:wght@200;300&family=Roboto:wght@300&family=Yusei+Magic&display=swap');
 
+:root {
+    --gryffindor-mainColor: #b62025;
+    --gryffindor-secColor: #f7a418; 
+    
+    --ravenclaw-mainColor: #0604B4; 
+    --ravenclaw-secColor:  #1D251B; 
+
+    --slytherin-mainColor: #7E37D2; 
+    --slytherin-secColor: #086D60; 
+
+    --hufflepuff-mainColor: #FCD21F;
+    --hufflepuff-secColor: #5C5F68;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -53,7 +67,7 @@ table {
 }
 h1 {
     padding-bottom: 2rem;
-    font-size: 4rem;
+    font-size: 5rem;
     line-height: 4.75rem;
     font-family: 'Harry Potter', sans-serif;
     color: white;
@@ -87,16 +101,6 @@ hr {
     background-position: center;
 }
 
-.background-gryffindor {
-    background-image: url("../images/gryffindor_bg.jpg");
-    height: 100vh;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    filter: blur(8px) brightness(80%);
-}
-
 .input-container {
     width: 30rem;
     margin: 0;
@@ -115,6 +119,27 @@ hr {
 
 .container.blurred {
     filter: blur(13px);
+}
+
+/* Houses Screen */
+.container.blurred.gryffindor {
+    background: rgb(182,32,37);
+    background: radial-gradient(circle, rgba(182,32,37,0.3) 0%, rgba(247,164,24,0.3) 100%);
+}
+
+.container.ravenclaw {
+    background: rgb(29,37,27);
+    background: radial-gradient(circle, rgba(39, 46, 37, 0.4) 0%, rgba(6,4,180,0.4) 100%);
+}
+
+.container.slytherin {
+    background: rgb(8,109,96);
+    background: radial-gradient(circle, rgba(8,109,96,0.5) 0%, rgba(126,55,210,0.4) 100%);
+}
+
+.container.hufflepuff {
+    background: rgb(92,95,104);
+    background: radial-gradient(circle, rgba(92,95,104,0.5) 0%, rgba(252,210,31,0.3) 100%);
 }
 
 .container > .input-div > .name-field {
@@ -184,24 +209,22 @@ hr {
 }
 
 #loader-container {
-    display: flex;
     position: fixed;
+    top: 30%;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
-    top: 20%;
+    gap: 7rem;
 }
 
 #loader-container > h1 {
-    padding-bottom: 0;
+    font-size: 3.5rem;
 }
 
-
-
 #loader-img {
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
 }
 
 
@@ -251,27 +274,14 @@ hr {
     }
 
     #send {
-        width: 5rem;
-        height: 5rem;
+        width: 4rem;
+        height: 4rem;
     }
 
-
-    /* Loader */
     #loading-screen > h1 {
         position: relative;
         top: -4rem;
         font-size: 2rem;
-    }
-
-    .loader {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        max-width: 12rem;
-        margin-top: 13rem/2;
-        margin-bottom: 13rem/2;
     }
 }
 
@@ -306,8 +316,8 @@ hr {
     }
 
     #send {
-        width: 6rem;
-        height: 6rem;
+        width: 5rem;
+        height: 5rem;
     }
 
     /* Loader */

@@ -122,7 +122,7 @@ const clickListeners = () => {
         e.preventDefault(); // Prevent normal submitting
 
         // Validating names with house
-        let name = document.querySelector('#input-name').value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        let name = document.querySelector('#input-name').value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
         
         let _house = "";
         let verifyName = false;
@@ -149,22 +149,24 @@ const clickListeners = () => {
                 setTimeout(() => {
                     loadingScreen.style.visibility = "hidden";
                     mainContainer.classList.remove("blurred");
+                    mainContainer.classList.remove(`${_house}`)
                     document.getElementById("loader-img").src="";
                     document.getElementById('loader-img').style = "";
-                }, 3000);
+                }, 2500);
                 verifyName = true;
                 return;
             } return;
         });
 
         if (!verifyName) {
-            alert("Ingrese un nombre válido!")
+            alert("¡Ingrese un nombre válido!")
         } else {
             let image = document.getElementById('loader-img')
             image.src=`./../assets/images/${_house}.png`;
-            image.style.transform = "scale(2)";
-            image.style.transition = "transform 1.5s ease";
+            image.style.transform = "scale(2.8)";
+            image.style.transition = "transform 1s ease";
 
+            mainContainer.classList.add(`${_house}`)
             mainContainer.classList.add("blurred");
             loadingScreen.style.visibility = 'visible';
         }
@@ -172,7 +174,7 @@ const clickListeners = () => {
 }
 
 let Main = () => {
-    bgMusic.volume = 0.3;
+    bgMusic.volume = 0.2;
     bind();
     clickListeners();
 }

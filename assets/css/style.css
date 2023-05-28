@@ -9,13 +9,13 @@
 
 :root {
     --gryffindor-mainColor: #b62025;
-    --gryffindor-secColor: #f7a418; 
-    
-    --ravenclaw-mainColor: #0604B4; 
-    --ravenclaw-secColor:  #1D251B; 
+    --gryffindor-secColor: #f7a418;
 
-    --slytherin-mainColor: #7E37D2; 
-    --slytherin-secColor: #086D60; 
+    --ravenclaw-mainColor: #0604B4;
+    --ravenclaw-secColor: #1D251B;
+
+    --slytherin-mainColor: #7E37D2;
+    --slytherin-secColor: #086D60;
 
     --hufflepuff-mainColor: #FCD21F;
     --hufflepuff-secColor: #5C5F68;
@@ -28,43 +28,49 @@ del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
-fieldset, label, legend,
+fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
     height: 100vh;
 }
+
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
+
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
+
 h1 {
     padding-bottom: 2rem;
     font-size: 5rem;
@@ -73,12 +79,14 @@ h1 {
     color: white;
     text-shadow: 3px 3px 3px black;
 }
+
 h2 {
     font-family: 'Harry Potter', sans-serif;
     color: white;
     font-size: 2.75rem;
     text-shadow: 3px 3px 3px black;
 }
+
 h3 {
     font-family: 'Harry Potter', sans-serif;
     color: white;
@@ -88,6 +96,7 @@ h3 {
     filter: drop-shadow(2px 2px 1px black);
     padding-bottom: 1rem;
 }
+
 hr {
     width: 50%;
 }
@@ -123,26 +132,26 @@ hr {
 
 /* Houses Screen */
 .container.blurred.gryffindor {
-    background: rgb(182,32,37);
-    background: radial-gradient(circle, rgba(182,32,37,0.3) 0%, rgba(247,164,24,0.3) 100%);
+    background: rgb(182, 32, 37);
+    background: radial-gradient(circle, rgba(182, 32, 37, 0.3) 0%, rgba(247, 164, 24, 0.3) 100%);
 }
 
 .container.ravenclaw {
-    background: rgb(29,37,27);
-    background: radial-gradient(circle, rgba(39, 46, 37, 0.4) 0%, rgba(6,4,180,0.4) 100%);
+    background: rgb(29, 37, 27);
+    background: radial-gradient(circle, rgba(39, 46, 37, 0.4) 0%, rgba(6, 4, 180, 0.4) 100%);
 }
 
 .container.slytherin {
-    background: rgb(8,109,96);
-    background: radial-gradient(circle, rgba(8,109,96,0.5) 0%, rgba(126,55,210,0.4) 100%);
+    background: rgb(8, 109, 96);
+    background: radial-gradient(circle, rgba(8, 109, 96, 0.5) 0%, rgba(126, 55, 210, 0.4) 100%);
 }
 
 .container.hufflepuff {
-    background: rgb(92,95,104);
-    background: radial-gradient(circle, rgba(92,95,104,0.5) 0%, rgba(252,210,31,0.3) 100%);
+    background: rgb(92, 95, 104);
+    background: radial-gradient(circle, rgba(92, 95, 104, 0.5) 0%, rgba(252, 210, 31, 0.3) 100%);
 }
 
-.container > .input-div > .name-field {
+.container>.input-div>.name-field {
     font-family: 'Yusei Magic', sans-serif;
     font-size: 1.4rem;
     text-align: center;
@@ -218,7 +227,7 @@ hr {
     gap: 7rem;
 }
 
-#loader-container > h1 {
+#loader-container>h1 {
     font-size: 3.5rem;
 }
 
@@ -227,6 +236,44 @@ hr {
     height: 8rem;
 }
 
+#loader {
+    display: flex;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+
+figure{margin:0;transform:translate(-50%,-50%) rotate(0deg) scale(2.5, 2.5);position:absolute;left:50%;top:50%;border-radius:150px;box-sizing:border-box;animation:rotation 20s infinite linear;margin-top: 2rem;}
+
+figure div:after{content:"";width:20px;height:20px;border:1px solid #fff;box-sizing:border-box;position:absolute;left:20px;top:20px;animation:shuffle 2s infinite;}
+
+figure div:nth-child(1){transform:rotate(0deg)}
+figure div:nth-child(1):after{animation-delay:-0.5s;}
+figure div:nth-child(2){transform:rotate(45deg)}
+figure div:nth-child(2):after{animation-delay:-1s;}
+figure div:nth-child(3){transform:rotate(90deg)}
+figure div:nth-child(3):after{animation-delay:-1.5s;}
+figure div:nth-child(4){transform:rotate(135deg)}
+figure div:nth-child(4):after{animation-delay:-2s;}
+figure div:nth-child(5){transform:rotate(180deg)}
+figure div:nth-child(5):after{animation-delay:-2.5s;}
+figure div:nth-child(6){transform:rotate(225deg)}
+figure div:nth-child(6):after{animation-delay:-3s;}
+figure div:nth-child(7){transform:rotate(270deg)}
+figure div:nth-child(7):after{animation-delay:-3.5s;}
+figure div:nth-child(8){transform:rotate(315deg)}
+figure div:nth-child(8):after{animation-delay:-4;}
+
+@keyframes rotation{
+  100%{transform:translate(-50%,-50%) rotate(-360deg) scale(1.4,1.4);}
+}
+@keyframes shuffle{
+  50%{transform:scale(0.4,0.4) rotate(-90deg);border-radius:50%;}
+}
 
 /* MEDIA QUERY */
 @media screen and (max-width: 767px) {
@@ -278,7 +325,7 @@ hr {
         height: 4rem;
     }
 
-    #loader-container > h1 {
+    #loader-container>h1 {
         font-size: 2.5rem;
     }
 
@@ -324,7 +371,7 @@ hr {
     }
 
     /* Loader */
-    #loading-screen > h1 {
+    #loading-screen>h1 {
         position: relative;
         top: -4rem;
         font-size: 2.5rem;

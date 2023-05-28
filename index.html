@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,26 +10,36 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Hogwarts' Houses</title>
 </head>
+
 <body>
+    <div id="loader">
+        <figure>
+            <div></div><div></div>
+            <div></div><div></div>
+            <div></div><div></div>
+            <div></div><div></div>
+          </figure>
+    </div>
+
     <div class="background-image" id="background">
         <div id="view"></div>
         <div class="container" id="main-container">
             <h2>Bienvenidos/as a mis XV</h2><br>
             <h1>Gracia</h1>
-            
+
             <div class="input-container">
                 <h3>Ingresa tu nombre:</h3>
-                    <form id="form">
-                        <input type="text" id="input-name" class="name-field">
-                        <input type="image" src="./assets/images/sorting_hat.png" value=" submit" id="send">
-                    </form>
+                <form id="form">
+                    <input type="text" id="input-name" class="name-field">
+                    <input type="image" src="./assets/images/sorting_hat.png" value=" submit" id="send">
+                </form>
             </div>
         </div>
 
         <div id="loading-screen">
             <div id="loader-container">
                 <h1>Perteneces a...</h1>
-                <img src="" id="loader-img"/>
+                <img src="" id="loader-img" />
             </div>
         </div>
     </div>

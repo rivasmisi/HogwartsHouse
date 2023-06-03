@@ -16,6 +16,7 @@ let form = null;
 let content = null;
 let background = null;
 let loader = null;
+let input = null;
 let time = 0;
 
 const houses = [
@@ -120,6 +121,7 @@ const bind = () => {
     background = document.querySelector('#background');
     bgMusic = document.getElementById('#bgMusic');
     loader = document.querySelector('#loader');
+    input = document.querySelector('#input-name');
 }
 
 const clickListeners = () => {
@@ -161,6 +163,7 @@ const clickListeners = () => {
                     mainContainer.classList.remove(`${_house}`)
                     document.getElementById("loader-img").src="";
                     document.getElementById('loader-img').style = "";
+                    input.focus();
                 }, time + 1500);
                 verifyName = true;
                 return;
@@ -171,6 +174,9 @@ const clickListeners = () => {
             alert("¡Ingrese un nombre válido!")
         } else {
             let image = document.getElementById('loader-img')
+            // Clear name
+            input.value = "";
+
             setTimeout(() => {
             loader.style.visibility = 'hidden';
             image.style.visibility = 'visible';

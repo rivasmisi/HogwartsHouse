@@ -247,7 +247,7 @@ hr {
 }
 
 
-figure{margin:0;transform:translate(-50%,-50%) rotate(0deg) scale(2.5, 2.5);position:absolute;left:50%;top:50%;border-radius:150px;box-sizing:border-box;animation:rotation 20s infinite linear;margin-top: 2rem;}
+figure{margin:0;transform:translate(-50%,-50%) rotate(0deg) scale(2.5, 2.5);position:absolute;left:50%;top:50%;border-radius:150px;box-sizing:border-box;animation:rotation 20s infinite linear;margin-top: 5rem;}
 
 figure div:after{content:"";width:20px;height:20px;border:1px solid #fff;box-sizing:border-box;position:absolute;left:20px;top:20px;animation:shuffle 2s infinite;}
 
